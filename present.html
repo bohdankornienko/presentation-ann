@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Artificial Neural Networks</title>
+
+		<meta name="description" content="A presentation about Artificial Neural Networks">
+		<meta name="author" content="Bohdan Kornienko">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="reveal_js/css/reset.css">
+		<link rel="stylesheet" href="reveal_js/css/reveal.css">
+		<link rel="stylesheet" href="reveal_js/css/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="reveal_js/lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal_js/css/print/pdf.css' : 'reveal_js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+        <style type="text/css">
+            .reveal h1 {
+                font-size: larger;
+            }
+
+            .reveal h2 {
+                font-size: smaller;
+                text-transform: none;
+            }
+
+            div.block {
+                border: 1px solid white;
+                border-radius: 10px;
+                margin: 10px;
+                display: inline-block;
+                padding: 5px;
+                padding-left: 10px;
+                padding-right: 10px;
+                background-color: rgba(0,0,0, 0.2);
+
+            }
+            .reveal blockquote {
+                width: 100%;
+            }
+
+            .reveal blockquote span.author {
+                position: relative;
+                display: block;
+                font-size: smaller;
+                text-align: right;
+                margin-top: 5px;
+                color: #999;
+
+                i {
+                    position: relative;
+                    background: #eee;
+                    padding-left: 5px;
+                    font-style: italic;
+                    z-index: 5;
+                }
+            }
+
+            a.note {
+                font-size: 20%;
+                display: block;
+            }
+
+            div.block {
+                border: 1px solid white;
+                border-radius: 10px;
+                margin: 10px;
+                display: inline-block;
+                padding: 5px;
+                padding-left: 10px;
+                padding-right: 10px;
+                background-color: rgba(0,0,0, 0.2);
+            }
+        </style>
+         <style type="text/css">
+                    table, th, td {
+                      border: 1px solid white;
+                    }
+                </style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+                <section>
+                    <h1>Artificial Neural Networks</h1>
+                </section>
+
+                <section>
+                    <div class="block">CS BA</div>
+                    <div class="block">C++</div>
+                    <div class="block">Data Science</div>
+                    <hr>
+                    <div class="block">Drawing</div>
+                    <div class="block">Khan Academy</div>
+                    <div class="block">Driving</div>
+                </section>
+
+
+
+
+                <section><h1>References</h1>
+                    <ul>
+                        <li><a href="https://towardsdatascience.com/regularization-in-machine-learning-76441ddcf99a">Regularization in Machine Learning</a></li>
+                        <li><a href="https://www.youtube.com/playlist?list=PLLssT5z_DsK-h9vYZkQkYNWcItqhlRJLN">Andre Ng's ML cource, sections 7, 10</a></li>
+                        <li><a href="https://www.manning.com/books/deep-learning-with-pytorch">Deep Learning with PyTorch</a></li>
+                        <li><a href="http://faculty.marshall.usc.edu/gareth-james/ISL/">Introduction To Statistical Learning</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h1>Cheers!</h1>
+                </section>
+
+                <section>
+                    <img class="stretch" src="images/qr_link.png">
+                </section>
+
+			</div>
+
+		</div>
+
+		<script src="reveal_js/js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'reveal_js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal_js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal_js/plugin/highlight/highlight.js', async: true },
+					{ src: 'reveal_js/plugin/search/search.js', async: true },
+					{ src: 'reveal_js/plugin/zoom-js/zoom.js', async: true },
+					{ src: 'reveal_js/plugin/notes/notes.js', async: true },
+                    { src: 'reveal_js/plugin/math/math.js', async: true }
+				]
+			});
+
+		</script>
+	</body>
+</html>
