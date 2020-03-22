@@ -90,12 +90,17 @@
                 padding-right: 10px;
                 background-color: rgba(0,0,0, 0.2);
             }
+
+            .emphasize {
+                font-weight: bold;
+                color: #42affa;
+            }
         </style>
          <style type="text/css">
-                    table, th, td {
-                      border: 1px solid white;
-                    }
-                </style>
+            table, th, td {
+              border: 1px solid white;
+            }
+        </style>
 	</head>
 
 	<body>
@@ -118,15 +123,302 @@
                     <div class="block">Driving</div>
                 </section>
 
+                <section>
+                    <h1>Non-Linear problems</h1>
+                </section>
+                <section>
+                    <img class="stretch" src="images/nonlinear.png">
+                </section>
 
+                <section>
+                    <img style="width:30%" src="images/cats/cute-4646160_960_720.jpg">
+                    <img style="width:30%" src="images/cats/cat-cute-cat-animal-pet-preview.jpg">
+                    <img style="width:30%" src="images/cats/cute-4912213_960_720.jpg">
+                </section>
 
+                <section>
+                    <section>
+                        <h1>Nature example</h1>
+                    </section>
+                    <section>
+                        <img class="stretch" src="images/neuron_structure.png">
+                    </section>
+                    <section>
+                        <p>Inspired by nature the idea of<br><span class="emphasize">Artificial Neural Networks</span><br>has been developed.</p>
+                    </section>
+                </section>
 
-                <section><h1>References</h1>
+                <section>
+                    <section>
+                        <h1>Neural Network Architecture</h1>
+                    </section>
+
+                    <section>
+                        <img class="stretch" src="images/ann.png">
+                    </section>
+
+                    <section>
+                        <h1>Perceptron</h1>
+                        <p>TBD</p>
+                    </section>
+
+                    <section>
+                        <h1>Deep Neural Networks</h1>
+                        <p>TBD</p>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Activation Function</h1>
+                    </section>
+
+                    <section>
+                        <img class="stretch" src="images/activation_function.png">
+                    </section>
+
+                    <section>
+                        <img class="stretch" src="images/activations.png">
+                    </section>
+
+                    <section>
+                        <p>Activation functions introduce <span class="emphasize">non-linearity</span> into the network.</p>
+                    </section>
+
+                    <section>
+                        <h1>Sigmoid</h1>
+                        <script type="math/tex; mode=display">
+                            a(x) = g(z) = g(w^Tx) = \frac{1}{1 + e^{-w^Tx}}
+                        </script>
+                    </section>
+                    <section>
+                        <ul>
+                            <li>Sigmoid outputs values in range [0, 1]</li>
+                            <li>0 there is no signal</li>
+                            <li>1 there is a strong signal</li>
+                        </ul>
+                        <p>Which is close model of the biological neuron.</p>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Neuron weights</h1>
+                    </section>
+
+                    <section>
+                        <p>Neuron weights defined layer by layer.</p>
+                    </section>
+
+                    <section>
+                        <img class="stretch" src="images/ann_graph.png">
+                        <script type="math/tex; mode=display">
+                            W^{(1)} = \begin{bmatrix}
+                                       W^{(1)}_{10} & W^{(1)}_{11} & W^{(1)}_{12} \\[0.3em]
+                                       W^{(1)}_{20} & W^{(1)}_{21} & W^{(1)}_{22}
+                                     \end{bmatrix}
+                        </script>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Forward Propagation</h1>
+                    </section>
+
+                    <section>
+                        <img class="stretch" src="images/perceptron.png">
+                    </section>
+
+                    <section>
+                        <img class="stretch" src="images/perceptron.png">
+                        <script type="math/tex; mode=display">
+                            sigmoid(w, x)= \frac{1}{1 + e^{-w^Tx}}
+                        </script>
+                    </section>
+
+                    <section>
+                        <img class="stretch" src="images/perceptron.png">
+                        <script type="math/tex; mode=display">
+                            a_{11}(x) = \frac{1}{1 + exp(-(1 \cdot W_{10} +x_1 \cdot W_{11} + x_2 \cdot W_{12})}
+                        </script>
+                        <script type="math/tex; mode=display">
+                            a_{12}(x) = \frac{1}{1 + exp(-(1 \cdot W_{20} +x_1 \cdot W_{21} + x_2 \cdot W_{22})}
+                        </script>
+                    </section>
+
+                    <section>
+                        <script type="math/tex; mode=display">
+                            x = \begin{bmatrix}
+                                   +1           \\[0.3em]
+                                   x_1 \\[0.3em]
+                                   x_2
+                                 \end{bmatrix},
+                            W^{(1)} = \begin{bmatrix}
+                                   W^{(1)}_{10} & W^{(1)}_{11} & W^{(1)}_{12} \\[0.3em]
+                                   W^{(1)}_{20} & W^{(1)}_{21} & W^{(1)}_{22}
+                                 \end{bmatrix}
+                        </script>
+                        <script type="math/tex; mode=display">
+                            a(x) = g(z) = g(W^{(1)}x) = \frac{1}{1 + e^{-W^{(1)}x}}
+                        </script>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Back Propagation</h1>
+                    </section>
+
+                    <section>
+                         <p> The idea of back propagation was proposed by<br><b>David E. Ruineihart, <span class="emphasize">Geoffrey E. Hinton</span>,<br>and Ronald J. Williams</b>
+                        </p>
+                        <p>In their paper <span class="emphasize">Learning internal representations by error propagation</span> in 1985</p>
+                    </section>
+
+                    <section>
+                        <p>BTW</p> <p>The ideas of this paper then in 1989 <span class="emphasize">LeCun</span> used for developing his <span class="emphasize">LaNet</span> architecture.</p>
+                    </section>
+
+                    <section>
+                        <img class="stretch" src="images/ann_graph.png">
+                    </section>
+
+                    <section>
+                        <h1>Cost function</h1>
+                        <script type="math/tex; mode=display">
+                            J(W) = \frac{1}{2} \sum^k_{j=1}(y^{(i)}_j - h_j(x^{(i)}))^2
+                        </script>
+                    </section>
+
+                    <section>
+                        <script type="math/tex; mode=display">
+                            f(x) = W^{(1)}x
+                        </script>
+                        <script type="math/tex; mode=display">
+                            g(x) = \frac{1}{1 + e^{-x}}
+                        </script>
+                        <script type="math/tex; mode=display">
+                            h(x) = g(f(x))
+                        </script>
+                        <script type="math/tex; mode=display">
+                            J(x) = (y^{(i)} - h(x^{(i)}))^2 = J(g(f(x)))
+                        </script>
+                    </section>
+
+                    <section>
+                        <script type="math/tex; mode=display">
+                            J(x) = (y^{(i)} - h(x^{(i)}))^2 = J(g(f(x)))
+                        </script>
+
+                        <script type="math/tex; mode=display">
+                            y = J(g(f(x))) \implies \frac{dJ}{dx} = \frac {dJ}{dg} \cdot \frac{dg}{df} \cdot \frac{df}{dx}
+                        </script>
+                    </section>
+
+                    <section>
+                        <h1>Derivative for J</h1>
+                        <img class="stretch" src="images/ann_graph.png">
+                        <script type="math/tex; mode=display">
+                            \frac{\partial J (W)}{\partial a_{2i}} = a_{2i} - y_{i}
+                        </script>
+                    </section>
+
+                    <section>
+                        <h1>Derivative for activation</h1>
+                        <img class="stretch" src="images/ann_graph.png">
+                        <script type="math/tex; mode=display">
+                            \frac{\partial J (W)}{\partial z_{2i}} = \frac{\partial a_{2i}}{\partial z_{2i}} \cdot \frac{\partial J(W)}{\partial a_{2i}}
+                                       = a_{2i}(1 - a_{2i}) \cdot (a_{2i} - y_i)
+                        </script>
+                    </section>
+
+                    <section>
+                        <h1>Derivative for dot product</h1>
+                        <img class="stretch" src="images/ann_graph.png">
+                        <script type="math/tex; mode=display">
+                            \frac{\partial J (W)}{\partial W_{ij}} = \frac{\partial z_{2i}}{\partial W_{ij}} \cdot \frac{\partial J(W)}{\partial z_{2i}}
+                                           = a_{ij} a_{2i}(1 - a_{2i}) \cdot (a_{2i} - y_i)
+                        </script>
+                    </section>
+
+                    <section>
+                        <h1>Single sample gradient</h1>
+                        <script type="math/tex; mode=display">
+                            \frac{\partial J (W)}{\partial W_{ij}^{(i)}} = \nabla_W J(W)
+                        </script>
+                    </section>
+
+                    <section>
+                        <h1>Entire dataset gradient</h1>
+                        <script type="math/tex; mode=display">
+                            \Delta W^{(l)} = \sum^m_{i=1} \left( \nabla_{W^{(l)}} J(W^{(l)}) \right)^{i}
+                        </script>
+                    </section>
+                </section>
+
+                <section>
+                    <h1>Weights Update</h1>
+                    <script type="math/tex; mode=display">
+                        W^{(l)} = W^{(l)} - \alpha \left( \frac{1}{m} \Delta W^{(l)} \right)
+                    </script>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Softmax</h1>
+
+                        <script type="math/tex; mode=display">
+                            a_i = \frac{e^{W^T_i x}}{\sum_{j=1}^{k} e^{W^T_i x}}
+                        </script>
+                    </section>
+
+                    <section>
+                        <script type="math/tex; mode=display">
+                                x = \begin{bmatrix}
+                                   car           \\[0.3em]
+                                   cat \\[0.3em]
+                                   dog
+                                 \end{bmatrix},
+                                x = \begin{bmatrix}
+                                   0.25           \\[0.3em]
+                                   0.6 \\[0.3em]
+                                   0.15
+                                 \end{bmatrix}
+                        </script>
+                    </section>
+                </section>
+
+                <section>
+                    <h1>Convolutional Neural Networks</h1>
+                    <img class="stretch" src="images/conv_net.jpeg">
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Bias-Variance Tradeoff</h1>
+                    </section>
+                    <section>
+                        <p>If <span class="emphasize">bias</span> is high (underfit): <span class="emphasize">increase</span> number of layers, <span class="emphasize">increase</span> number of parameters</p>
+                    </section>
+                    <section>
+                        <p>If <span class="emphasize">viariance</span> is high (overfit): <span class="emphasize">decrease</span> number of layers, <span class="emphasize">decrease</span> number of parameters</p>
+                    </section>
+
+                    <section>
+                        <p>Few words on how to construct your own architecture.</p>
+                        <img class="stretch" src="images/debug-losses.png">
+                    </section>
+
+                </section>
+
+                <section>
+                    <h1>References</h1>
                     <ul>
-                        <li><a href="https://towardsdatascience.com/regularization-in-machine-learning-76441ddcf99a">Regularization in Machine Learning</a></li>
-                        <li><a href="https://www.youtube.com/playlist?list=PLLssT5z_DsK-h9vYZkQkYNWcItqhlRJLN">Andre Ng's ML cource, sections 7, 10</a></li>
-                        <li><a href="https://www.manning.com/books/deep-learning-with-pytorch">Deep Learning with PyTorch</a></li>
-                        <li><a href="http://faculty.marshall.usc.edu/gareth-james/ISL/">Introduction To Statistical Learning</a></li>
+                        <li><a href="https://apps.dtic.mil/dtic/tr/fulltext/u2/a164453.pdf">Hinton, et. al. Learning internal representations by error propagation</a></li>
+                        <li><a href="https://www.deeplearningbook.org/">Deep Learning Book</a></li>
+                        <li><a href="http://cs231n.stanford.edu/2016/syllabus">cs321n</a></li>
+                        <li><a href="https://www.youtube.com/playlist?list=PL16j5WbGpaM0_Tj8CRmurZ8Kk1gEBc7fg">cs231n videos</a></li>
                     </ul>
                 </section>
 
@@ -137,6 +429,13 @@
                 <section>
                     <img class="stretch" src="images/qr_link.png">
                 </section>
+
+                <!--
+                    Things to add to the presentation:
+                        - Gradient exposion
+                        - Vanishing gradient problem
+                        - 2d convolution as a dot product
+                -->
 
 			</div>
 
