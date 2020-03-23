@@ -93,7 +93,7 @@
 
             .emphasize {
                 font-weight: bold;
-                color: #42affa;
+                color: #dbc844;
             }
         </style>
          <style type="text/css">
@@ -124,16 +124,18 @@
                 </section>
 
                 <section>
-                    <h1>Non-Linear problems</h1>
-                </section>
-                <section>
-                    <img class="stretch" src="images/nonlinear.png">
-                </section>
+                    <section>
+                        <h1>Non-Linear problems</h1>
+                    </section>
+                    <section>
+                        <img class="stretch" src="images/nonlinear.png">
+                    </section>
 
-                <section>
-                    <img style="width:30%" src="images/cats/cute-4646160_960_720.jpg">
-                    <img style="width:30%" src="images/cats/cat-cute-cat-animal-pet-preview.jpg">
-                    <img style="width:30%" src="images/cats/cute-4912213_960_720.jpg">
+                    <section>
+                        <img style="width:30%" src="images/cats/cute-4646160_960_720.jpg">
+                        <img style="width:30%" src="images/cats/cat-cute-cat-animal-pet-preview.jpg">
+                        <img style="width:30%" src="images/cats/cute-4912213_960_720.jpg">
+                    </section>
                 </section>
 
                 <section>
@@ -155,11 +157,6 @@
 
                     <section>
                         <img class="stretch" src="images/ann.png">
-                    </section>
-
-                    <section>
-                        <h1>Perceptron</h1>
-                        <img class="stretch" src="images/perceptron_1.png">
                     </section>
 
                     <section>
@@ -277,7 +274,7 @@
                     </section>
 
                     <section>
-                        <p>BTW</p> <p>The ideas of this paper then in 1989 <span class="emphasize">LeCun</span> used for developing his <span class="emphasize">LaNet</span> architecture.</p>
+                        <p>BTW</p> <p>The idea of this paper was used in 1989  by <span class="emphasize">LeCun</span> for developing his <span class="emphasize">LeNet</span> architecture.</p>
                     </section>
 
                     <section>
@@ -390,8 +387,30 @@
                 </section>
 
                 <section>
-                    <h1>Convolutional Neural Networks</h1>
-                    <img class="stretch" src="images/conv_net.jpeg">
+                    <section>
+                        <h1>Architecture types</h1>
+                    </section>
+
+                    <section>
+                        <h1>Perceptron</h1>
+                        <img class="stretch" src="images/perceptron_1.png">
+                    </section>
+
+                    <section>
+                        <h1>Convolutional Neural Networks</h1>
+                        <img class="stretch" src="images/conv_net.jpeg">
+                    </section>
+
+                    <section>
+                        <h1>Other</h1>
+                        <ul>
+                            <li>RNN, LSTM, etc</li>
+                            <li>GAN</li>
+                            <li>Spiking Networks</li>
+                            <li>Graph Nets</li>
+                        </ul>
+                    </section>
+
                 </section>
 
                 <section>
@@ -413,12 +432,94 @@
                 </section>
 
                 <section>
+                    <section>
+                        <h1>Such as life</h1>
+                    </section>
+                    <section>
+                        <h1>tensorflow vs pytorch</h1>
+
+                        <p><span class="emphasize">Tensorflow</span> is good for deployment.</p>
+                        <p><span class="emphasize">PyTorch</span> for prototyping.</p>
+
+                        <p>In general, it is not about tool it is about the problem.</p>
+                    </section>
+
+                    <section>
+                        <h1>Log the progress</h1>
+                        <ul>
+                            <li>Tensorboard</li>
+                            <li>Visdom</li>
+                            <li>Console output + log files</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h1>Train loop vs Callbacks</h1>
+                    </section>
+
+                    <section>
+                        <h1>Callbacks</h1>
+
+                        <table>
+                            <tr>
+                                <th>Pros</th>
+                                <th>Cons</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li>Compact code</li>
+                                        <li>Things handled behind the scene</li>
+                                        <li>Less work</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Framework related</li>
+                                        <li>No control over the train loop</li>
+                                        <li>Sometimes difficult to debug</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section>
+                        <h1>Manual train loop</h1>
+
+                        <table>
+                            <tr>
+                                <th>Pros</th>
+                                <th>Cons</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li>Full control of the process</li>
+                                        <li>Framework agnostic</li>
+                                        <li>Easy to debug</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Time consuming</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </section>
+
+                </section>
+
+                <section>
                     <h1>References</h1>
                     <ul>
                         <li><a href="https://apps.dtic.mil/dtic/tr/fulltext/u2/a164453.pdf">Hinton, et. al. Learning internal representations by error propagation</a></li>
                         <li><a href="https://www.deeplearningbook.org/">Deep Learning Book</a></li>
                         <li><a href="http://cs231n.stanford.edu/2016/syllabus">cs321n</a></li>
                         <li><a href="https://www.youtube.com/playlist?list=PL16j5WbGpaM0_Tj8CRmurZ8Kk1gEBc7fg">cs231n videos</a></li>
+                        <li><a href="https://towardsdatascience.com/types-of-optimization-algorithms-used-in-neural-networks-and-ways-to-optimize-gradient-95ae5d39529f">Medium: Optimization Algorithms</a></li>
+                        <li><a href="https://github.com/facebookresearch/visdom">Facebook Visdom</a></li>
+                        <li><a href="https://github.com/deepmind/graph_nets">Graph Nets</a></li>
                     </ul>
                 </section>
 
@@ -434,7 +535,12 @@
                     Things to add to the presentation:
                         - Gradient exposion
                         - Vanishing gradient problem
+                        - batch norm
+                        - practical advice on how to show loss functions, the code structure etc.
                         - 2d convolution as a dot product
+                        - optimizers: https://towardsdatascience.com/types-of-optimization-algorithms-used-in-neural-networks-and-ways-to-optimize-gradient-95ae5d39529f
+                        - Expand info on different architecture types
+                        - Feature network + Task network thing
                 -->
 
 			</div>
